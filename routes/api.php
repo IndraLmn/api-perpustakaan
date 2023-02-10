@@ -1,11 +1,10 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\PostC;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SiswaC;
 
 Route::get('/', function(){
-    dd('Hello World API !');
+    return 'Hello World API !';
 });
-
-Route::get('/siswa', [SiswaC::class, 'index']);
+Route::get('/posts', [PostC::class, 'index']);
